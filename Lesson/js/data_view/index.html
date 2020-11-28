@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <table id="root" class="table table-striped">
+        <thead>
+           <td>序号</td>
+           <td>名字</td>
+           <td>年龄</td>
+           <td>家乡</td>
+           <td>花名</td>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        const students=[{
+            name : '姜',
+            age : 18,
+            hometown : 'home',
+            nickName : '结合'
+        },
+        {
+            name:'狗子',
+            age:20,
+            hometown:'抚州',
+            nickName:'三星',
+        },
+        {
+            name : '邹振于',
+            age : 21,
+            hometown : '赣州',
+            nickName : '东理'
+        },
+        {
+          name:'范志强',
+            age: 20,
+            hometown: '余干',
+            nickName:'范佐'
+        },
+        {
+            name: '廖辉',
+            age: 20,
+            hometown: '赣州',
+            nickName: '三星',
+        }
+  ]
+   const tBodyEle=document.querySelector('#root tbody');
+   students.forEach((students,index)=>{
+       tBodyEle.innerHTML +=`
+        <tr>
+        <td>${index+1}</td>
+        <td>${students.name}</td>
+        <td>${students.age}</td>
+        <td>${students.hometown}</td>
+        <td>${students.nickName}</td>
+        
+        </tr> 
+        `
+   })
+
+    </script>
+</body>
+</html>
